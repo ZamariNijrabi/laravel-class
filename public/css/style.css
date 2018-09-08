@@ -5,3 +5,6 @@
 #pointing-menu{
 	border:none;
 }
+#goolge_map{
+	background-image: url('../images/location.jpg');
+}

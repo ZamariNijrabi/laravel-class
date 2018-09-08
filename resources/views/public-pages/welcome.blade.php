@@ -263,10 +263,19 @@
             <a href="#" class="item">Favorite X-Men</a>
           </div>
         </div>
-        <div class="seven wide column">
+        <div class="five wide column">
           <h4 class="ui inverted header">Footer Header</h4>
           <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
         </div>
+        <div class="five wide column">
+                <h4>Our Address</h4>
+                130-310 Duis lacinia dictum, <br>
+                Vestibulum auctor, 10990<br>
+            	Nam rhoncus, diam a mollis<br>
+                
+                <div class="clear h20"></div>
+                <div class="img_nom img_border" id ="goolge_map"><a href="http://goo.gl/VZrm0H" target="_blank"><img src="../images/location.jpg"</a></div>
+            </div>
       </div>
     </div>
   </div>
