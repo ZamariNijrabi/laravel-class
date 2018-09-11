@@ -182,7 +182,7 @@
       <h1 class="ui inverted header">
         Online Shopping
       </h1>
-      <h2>Do whatever you want when you want to.</h2>
+      <h2>Buy something online and safe.</h2>
       <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
     </div>
 
