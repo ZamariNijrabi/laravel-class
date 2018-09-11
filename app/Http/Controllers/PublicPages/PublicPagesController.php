@@ -9,6 +9,9 @@ class PublicPagesController extends Controller
 {
     public function index()
     {
+        $uuid = (string) Str::uuid();
+
+        echo $uuid;
         return 'welcome page';
     }
 
