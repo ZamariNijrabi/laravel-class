@@ -2,11 +2,13 @@
 
 namespace App\Providers;
 
+
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
 class RouteServiceProvider extends ServiceProvider
 {
+
     /**
      * This namespace is applied to your controller routes.
      *
@@ -15,14 +17,6 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     protected $namespace = 'App\Http\Controllers';
-
-    /**
-     * This namespace is applied to your public pages controller routes.
-     *
-     *
-     * @var string
-     */
-    protected $publicPagesNamespace = 'App\Http\Controllers\PublicPages';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -61,14 +55,8 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapWebRoutes()
     {
         Route::middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/web.php'));
-
-
-        // Public pages routes
-        Route::middleware('web')
-             ->namespace($this->publicPagesNamespace)
-             ->group(base_path('routes/public-pages/publicPages.php'));
+            ->namespace($this->namespace)
+            ->group(base_path('routes/web.php'));
     }
 
     /**
@@ -81,8 +69,8 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapApiRoutes()
     {
         Route::prefix('api')
-             ->middleware('api')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/api.php'));
+            ->middleware('api')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/api.php'));
     }
 }

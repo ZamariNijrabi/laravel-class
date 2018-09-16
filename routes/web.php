@@ -13,6 +13,6 @@
 
 Auth::routes();
 
-Route::get('/','PublicController@publicPages');
+Route::get('/', 'PublicController@publicPages');
 Route::get('/home', 'HomeController@index')->name('home');
 
