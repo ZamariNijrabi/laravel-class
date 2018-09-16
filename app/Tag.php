@@ -5,18 +5,18 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Medicine extends Model
+class Tag extends Model
 {
 
     protected $guarded = [];
 
     /**
-     * Get the medicine orders
+     * Get the products of a tag
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function orders()
+    public function products()
     {
-        return $this->belongsToMany(Order::class);
+        return $this->belongsToMany(Product::class);
     }
 }
