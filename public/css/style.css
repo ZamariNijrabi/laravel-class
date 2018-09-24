@@ -1,7 +1,26 @@
-#banner-div{
-	background-image: url('../images/banner.jpg');
+#banner-div {
+    background-image: url('../images/banner.jpg');
 }
 
-#pointing-menu{
-	border:none;
+#pointing-menu {
+    border: none;
+}
+
+div.tile {
+    background-color: #0E566C;
+    border-radius: 10px;
+    height: 130px;
+    width: 130px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+div.tile i {
+    color: white;
+    margin-top: 45px;
+    font-size: 40px;
+}
+
+a, a:hover, a:link, a:active {
+    text-decoration: none;
 }

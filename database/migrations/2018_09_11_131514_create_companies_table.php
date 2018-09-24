@@ -19,7 +19,7 @@ class CreateCompaniesTable extends Migration
             $table->string('name');
             $table->text('address');
             $table->date('established_date');
-            $table->string('logo_path');
+            $table->string('logo_path')->nullable();
             $table->string('license_number');
             $table->string('phone');
             $table->string('email')->unique();

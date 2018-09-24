@@ -3,6 +3,9 @@
 namespace App;
 
 
+use App\Models\Comment;
+use App\Models\Company;
+use App\Models\Product;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Spatie\Permission\Traits\HasRoles;
@@ -49,5 +52,15 @@ class User extends Authenticatable
     public function products()
     {
         return $this->hasManyThrough(Product::class, Company::class);
+    }
+
+    /**
+     * Get the comments of user
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 }

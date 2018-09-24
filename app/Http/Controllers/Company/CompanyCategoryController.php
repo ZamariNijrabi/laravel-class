@@ -1,12 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Company;
+
 
 use App\CompanyCategory;
 use Illuminate\Http\Request;
 
 class CompanyCategoryController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -30,7 +32,7 @@ class CompanyCategoryController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -41,7 +43,7 @@ class CompanyCategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\CompanyCategory  $companyCategory
+     * @param  \App\CompanyCategory $companyCategory
      * @return \Illuminate\Http\Response
      */
     public function show(CompanyCategory $companyCategory)
@@ -52,7 +54,7 @@ class CompanyCategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\CompanyCategory  $companyCategory
+     * @param  \App\CompanyCategory $companyCategory
      * @return \Illuminate\Http\Response
      */
     public function edit(CompanyCategory $companyCategory)
@@ -63,8 +65,8 @@ class CompanyCategoryController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\CompanyCategory  $companyCategory
+     * @param  \Illuminate\Http\Request $request
+     * @param  \App\CompanyCategory $companyCategory
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, CompanyCategory $companyCategory)
@@ -75,7 +77,7 @@ class CompanyCategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\CompanyCategory  $companyCategory
+     * @param  \App\CompanyCategory $companyCategory
      * @return \Illuminate\Http\Response
      */
     public function destroy(CompanyCategory $companyCategory)

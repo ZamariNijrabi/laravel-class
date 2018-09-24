@@ -1,9 +1,11 @@
 <?php
 
+use App\ProductCategory;
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(ProductCategory::class, function (Faker $faker) {
     return [
-        //
+        'name' => $faker->name,
+        'description' => $faker->sentence(4),
     ];
 });

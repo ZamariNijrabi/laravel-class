@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('serial_number')->nullable();
             $table->unsignedInteger('price');
-            $table->string('image_path');
+            $table->string('image_path')->nullable();
             $table->boolean('is_used')->default(false);
             $table->string('owner_company_name');
 

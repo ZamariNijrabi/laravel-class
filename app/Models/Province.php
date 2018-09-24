@@ -1,22 +1,23 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 
 use Illuminate\Database\Eloquent\Model;
 
-class CompanyCategory extends Model
+class Province extends Model
 {
 
     protected $guarded = [];
 
     /**
-     * Get the companies of this category
+     * Get the companies
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function companies()
     {
+
         return $this->hasMany(Company::class);
     }
 }
