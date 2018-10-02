@@ -2,13 +2,7 @@
     background-image: url('../images/banner.jpg');
 }
 
-<<<<<<< HEAD
-#pointing-menu{
-	border:none;
-}
-#goolge_map{
-	background-image: url('../images/location.jpg');
-=======
+
 #pointing-menu {
     border: none;
 }
@@ -30,5 +24,17 @@ div.tile i {
 
 a, a:hover, a:link, a:active {
     text-decoration: none;
->>>>>>> c8b9fdd1b1864be910465510c2f5fcbd827f1389
+}
+
+ul.sidebar {
+    margin-top: 20px;
+    padding-right: 35px;
+}
+ul.sidebar li{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.margin-top-20{
+    margin-top: 20px;
 }
