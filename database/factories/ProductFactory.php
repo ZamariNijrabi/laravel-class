@@ -1,8 +1,8 @@
 <?php
 
-use App\Company;
-use App\Product;
-use App\ProductCategory;
+use App\Models\Company;
+use App\Models\Product;
+use App\Models\ProductCategory;
 use Faker\Generator as Faker;
 
 $factory->define(Product::class, function (Faker $faker) {

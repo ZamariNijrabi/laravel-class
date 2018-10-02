@@ -1,15 +1,15 @@
 <?php
 
-use App\Comment;
-use App\Company;
-use App\CompanyCategory;
-use App\Medicine;
-use App\Order;
-use App\Payment;
-use App\Product;
-use App\ProductCategory;
-use App\Province;
-use App\Tag;
+use App\Models\Comment;
+use App\Models\Company;
+use App\Models\CompanyCategory;
+use App\Models\Medicine;
+use App\Models\Order;
+use App\Models\Payment;
+use App\Models\Product;
+use App\Models\ProductCategory;
+use App\Models\Province;
+use App\Models\Tag;
 use App\User;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;

@@ -1,6 +1,7 @@
 <?php
 
-use App\Order;
+
+use App\Models\Order;
 use App\User;
 use Faker\Generator as Faker;
 

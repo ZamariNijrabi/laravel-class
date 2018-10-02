@@ -1,8 +1,8 @@
 <?php
 
-use App\Company;
-use App\CompanyCategory;
-use App\Province;
+use App\Models\Company;
+use App\Models\CompanyCategory;
+use App\Models\Province;
 use App\User;
 use Faker\Generator as Faker;
 
@@ -14,7 +14,7 @@ $factory->define(Company::class, function (Faker $faker) {
         'address'             => $faker->address,
         'established_date'    => $faker->date('Y-m-d'),
         'license_number'      => $faker->randomNumber(6),
-        'phone'               => $networks[$faker->numberBetween(0, 6)] . $faker->randomNumber(7),
+        'phone'               => $networks[ $faker->numberBetween(0, 6) ] . $faker->randomNumber(7),
         'email'               => $faker->safeEmail,
         'user_id'             => User::all()->random()->id,
         'province_id'         => Province::all()->random()->id,

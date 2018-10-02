@@ -1,7 +1,7 @@
 <?php
 
-use App\Comment;
-use App\Product;
+use App\Models\Comment;
+use App\Models\Product;
 use App\User;
 use Faker\Generator as Faker;
 
