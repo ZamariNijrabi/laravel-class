@@ -9,6 +9,6 @@ $factory->define(Comment::class, function (Faker $faker) {
     return [
         'user_id'    => User::all()->random()->id,
         'product_id' => Product::all()->random()->id,
-        'comment'    => $faker->sentence(20)
-    ];
+        'comment'    => $faker->sentence(10)
+            ];
 });

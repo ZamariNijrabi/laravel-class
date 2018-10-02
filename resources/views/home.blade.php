@@ -6,7 +6,7 @@
             <a href="{{ url('/companies') }}">
                 <div class="tile">
                     <i class="fa fa-home"></i>
-                </div>
+                </>div
                 <p class="text-center">Company</p>
             </a>
 

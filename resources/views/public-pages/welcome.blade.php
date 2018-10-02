@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
+  <link href="{{asset('/css/app.css')}}" rel="stylesheet" type ="text/css">
   <!-- Site Properties -->
   <title>Homepage - Semantic</title>
 
@@ -228,20 +228,69 @@
   </div>
 
   <div class="ui vertical stripe segment">
+      <div class="ui text container">
+        <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
+        <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
+        <a class="ui large button">Read More</a>
+        <h4 class="ui horizontal header divider">
+          <a href="#">Case Studies</a>
+        </h4>
+        <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
+        <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
+        <a class="ui large button">I'm Still Quite Interested</a>
+      </div>
+  </div>
+  <div class="ui vertical stripe segment">
     <div class="ui text container">
-      <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
-      <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
-      <a class="ui large button">Read More</a>
-      <h4 class="ui horizontal header divider">
-        <a href="#">Case Studies</a>
-      </h4>
-      <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
-      <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
-      <a class="ui large button">I'm Still Quite Interested</a>
+      <div class="center aligned column">
+        <!-- search -->
+        <div class="ui search">
+          <div class="ui icon input">
+            <input class="prompt" type="text" placeholder="Common passwords...">
+            <i class="search icon"></i>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+    //
+  <div class="center aligned row">
+  <div class="column">
 
+  <div class="ui fluid card">
+    <div class="image">
+      <img src="/images/avatar/large/daniel.jpg">
+    </div>
+    <div class="content">
+      <a class="header">Daniel Louise</a>
+    </div>
+  </div>
+</div>
 
+<div class="column">
+      <div class="ui fluid card">
+        <div class="image">
+          <img src="/images/avatar/large/daniel.jpg">
+        </div>
+        <div class="content">
+          <a class="header">Daniel Louise</a>
+        </div>
+      </div>
+
+</div>
+<div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <img src="/images/avatar/large/helen.jpg">
+      </div>
+      <div class="content">
+        <a class="header">Helen Troy</a>
+      </div>
+    </div>
+    </div>
+    </div>
+
+</div>
   <div class="ui inverted vertical footer segment">
     <div class="ui container">
       <div class="ui stackable inverted divided equal height stackable grid">
@@ -263,10 +312,19 @@
             <a href="#" class="item">Favorite X-Men</a>
           </div>
         </div>
-        <div class="seven wide column">
+        <div class="five wide column">
           <h4 class="ui inverted header">Footer Header</h4>
           <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
         </div>
+        <div class="five wide column">
+                <h4>Our Address</h4>
+                130-310 Duis lacinia dictum, <br>
+                Vestibulum auctor, 10990<br>
+            	Nam rhoncus, diam a mollis<br>
+                
+                <div class="clear h20"></div>
+                <div class="img_nom img_border" id ="goolge_map"><a href="http://goo.gl/VZrm0H" target="_blank"><img src="../images/location.jpg"</a></div>
+            </div>
       </div>
     </div>
   </div>
