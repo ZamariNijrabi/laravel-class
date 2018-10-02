@@ -13,7 +13,7 @@ $factory->define(Company::class, function (Faker $faker) {
         'address'             => $faker->address,
         'established_date'    => $faker->date('Y-m-d'),
         'license_number'      => $faker->randomNumber(6),
-        'phone '              => $networks($faker->numberBetween(0,6)),
+        'phone '              => $networks[$faker->numberBetween(0,6)],
         'email'               => $faker->safeEmail,
         'user_id'             => User::all()->random()->id,
         'province_id'         => Province::all()->random()->id,
