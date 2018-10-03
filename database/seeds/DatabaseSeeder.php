@@ -1,5 +1,4 @@
 <?php
-
 use App\Models\Comment;
 use App\Models\Company;
 use App\Models\CompanyCategory;
