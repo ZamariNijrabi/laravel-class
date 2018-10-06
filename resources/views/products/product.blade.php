@@ -5,10 +5,10 @@
 
     <div class="row">
         <div class="alert alert-primary col-md-12 margin-top-20">
-            My Companies
+            My Products
 
             <button class="btn btn-outline-primary btn-sm float-right" data-toggle="modal"
-                    data-target="#create-company"> Create New Company
+                    data-target="#create-company"> Add New Product
             </button>
         </div>
     </div>
@@ -19,37 +19,36 @@
                 <th class="text-center">Id</th>
                 <th class="text-center">Name</th>
                 {{--<th class="text-center">Status</th>--}}
+                
+                <th class="text-center">Price</th>
+                <th class="text-center">Is Used</th>
                 <th class="text-center">Register Date</th>
-                <th class="text-center">Established Date</th>
-                <th class="text-center">License Number</th>
-                <th class="text-center">Phone</th>
                 <th class="text-center">Edit</th>
                 <th class="text-center">Delete</th>
             </tr>
-            @foreach($companies as $company)
+            @foreach($product as $products)
                 <tr>
-                    <td class="text-center">{{$company->id}}</td>
-                    <td class="text-center">{{$company->name}}</td>
-                    <td class="text-center">{{$company->created_at}}</td>
-                    <td class="text-center">{{$company->established_date}}</td>
-                    <td class="text-center">{{$company->license_number}}</td>
-                    <td class="text-center">{{$company->phone}}</td>
+                    <td class="text-center">{{$products->id}}</td>
+                    <td class="text-center">{{$products->name}}</td>         
+                    <td class="text-center">{{$products->price}} af</td>
+                    <td class="text-center">{{$products->is_used}}</td>
+                    <td class="text-center">{{$products->created_at}}</td>
+                   
                     <td class="text-center text-primary">
-                        <a href="" onclick="editCompany({{ $company->id }}, event)">
+                        <a href="" onclick="">
                             Edit
                         </a>
                     </td>
                     <td class="text-center text-danger">
-                        <a href="" class="text-danger" onclick="deleteCompany({{$company->id}}, event)">Delete</a>
+                        <a href="" class="text-danger" onclick="">Delete</a>
                     </td>
                 </tr>
             @endforeach
         </table>
-        {{ $products }}
+        {{ $product->links() }}
     </div>
 
-    @include('company.modal')
-    @include('helpers.delete-modal')
+   
 @endsection
 @section('validation')
     {!! JsValidator::formRequest('App\Http\Requests\CompanyRequest','#create-company-form') !!}

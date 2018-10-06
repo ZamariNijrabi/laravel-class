@@ -12,12 +12,7 @@
 
     @yield('page-level-css')
 
-    {{--  select the application theme  --}}
-    @if(env('APP_THEME') == 'white')
-        <link href="{{ asset('/css/white.css') }}" type="text/css" rel="stylesheet">
-    @else
-        <link href="{{ asset('/css/black.css') }}" type="text/css" rel="stylesheet">
-    @endif
+   
 </head>
 <body>
  

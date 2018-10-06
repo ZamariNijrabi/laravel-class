@@ -20,6 +20,15 @@
             </a>
 
         </div>
+        <div class="col-md-2 offset-1">
+            <a href="{{ url('/products') }}">
+                <div class="tile">
+                    <i class="product hunt icon"></i>
+                </div>
+                <p class="text-center">Products</p>
+            </a>
+
+        </div>
         </div>
     </div>
 

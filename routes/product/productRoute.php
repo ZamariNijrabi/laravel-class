@@ -11,5 +11,5 @@
 |
 */
 // company routes
-Route::resource('/companies', 'CompanyController');
+Route::resource('/products', 'ProductController');
 

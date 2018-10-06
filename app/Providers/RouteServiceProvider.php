@@ -21,7 +21,8 @@ class RouteServiceProvider extends ServiceProvider
 
     // This namespace is applied to company namespace
     protected $companyNamespace = 'App\Http\Controllers\Company';
-
+    // this namespace is applied to product namespase
+    protected $productNamespace = 'App\Http\Controllers\Products';
     /**
      * Define your route model bindings, pattern filters, etc.
      *
@@ -66,6 +67,11 @@ class RouteServiceProvider extends ServiceProvider
         Route::middleware('web')
             ->namespace($this->companyNamespace)
             ->group(base_path('routes/company/companyRoute.php'));
+
+
+            Route::middleware('web')
+            ->namespace($this->productNamespace)
+            ->group(base_path('routes/product/productRoute.php'));
     }
 
     /**
