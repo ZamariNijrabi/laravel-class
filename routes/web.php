@@ -16,3 +16,25 @@ Auth::routes();
 Route::get('/', 'PublicController@publicPages');
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+
+// User routes
+Route::resource('users', 'UserController');
+Route::get('users/{id}/role', 'UserController@getUserRole');
+Route::post('/user/{id}/assign-role', 'UserController@assignRole');
+Route::get('/users/{id}/delete', 'UserController@destroy');
+
+
+// Role routes
+Route::resource('/roles', 'RoleController');
+Route::post('/roles/{id}/sync-permissions', 'RoleController@syncPermissions');
+Route::post('/roles/assign-permissions', 'RoleController@assignPermissions');
+Route::get('/roles/{id}/user', 'RoleController@getUsers');
+Route::get('/roles/{id}/delete', 'RoleController@destroy');
+
+// Permission routes
+Route::resource('/permissions', 'PermissionController');
+
+// profile and account routes
+Route::get('/profile', 'ProfileController@profile');
+Route::get('/profile-edit', 'ProfileController@editProfile');
