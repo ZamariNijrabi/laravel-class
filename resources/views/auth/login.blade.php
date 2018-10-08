@@ -41,7 +41,7 @@
 <body class="login">
 
 <div class="logo">
-    <h2 style="color: white">Welcome To Medicine Management System</h2>
+    <h2 style="color: white">Welcome to online shoping</h2>
 </div>
 
 <div class="menu-toggler sidebar-toggler">
@@ -95,7 +95,7 @@
 
 <div class="copyright"><b style="color: grey">
 
-        20{{date('y')}} &copy;  Rabia-e-Balkhi University - Kabul</b>
+        20{{date('y')}} &copy; Softbazar - Kabul</b>
 </div>
 
 

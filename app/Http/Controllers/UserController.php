@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Events\CreateUser;
 use App\Http\Requests\UserRequest;
 use App\User;
@@ -11,6 +12,11 @@ use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->setPermissions();
+    }
 
     /**
      * Display a listing of the resource.
@@ -44,13 +50,9 @@ class UserController extends Controller
      */
     public function store(UserRequest $request)
     {
-        DB::beginTransaction();
-
         $user = User::create($this->mapRequestData($request));
 
-        event(new CreateUser($user));
-
-        DB::commit();
+        $user->syncRoles('Guest');
 
         return back();
     }
@@ -152,5 +154,15 @@ class UserController extends Controller
             'email'    => $request->email,
             'password' => bcrypt($request->password)
         ];
+    }
+
+    /**
+     * Set permissions to each method
+     *
+     * @return void
+     */
+    private function setPermissions()
+    {
+        $this->middleware(['permission:View Users'])->only('index');
     }
 }

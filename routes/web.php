@@ -17,7 +17,6 @@ Route::get('/', 'PublicController@publicPages');
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-
 // User routes
 Route::resource('users', 'UserController');
 Route::get('users/{id}/role', 'UserController@getUserRole');
@@ -38,3 +37,6 @@ Route::resource('/permissions', 'PermissionController');
 // profile and account routes
 Route::get('/profile', 'ProfileController@profile');
 Route::get('/profile-edit', 'ProfileController@editProfile');
+
+// Log routes
+Route::get('/logs', 'LogController@index');

@@ -79,9 +79,10 @@
                         </a>
                     </div>
 
+                    @can('Create User')
                     {{-- Settings --}}
                     <div class="col-md-2 col-sm-4 col-xs-6 margin-top-10">
-                        <a href="/medicine" class="text-center">
+                        <a href="/users" class="text-center">
                             <div class="col-md-2 text-center">
                                 <div class="tiles">
                                     <i class="fa fa-cog"></i>
@@ -90,6 +91,7 @@
                             </div>
                         </a>
                     </div>
+                    @endcan
 
                     {{-- Users --}}
                     <div class="col-md-2 col-sm-4 col-xs-6 margin-top-10">

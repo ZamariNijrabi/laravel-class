@@ -31,7 +31,7 @@
 <script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js')}}"></script>
 
 {{--  Custom scripts   --}}
-<script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
 
 @yield('validator')
 <script>

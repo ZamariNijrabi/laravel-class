@@ -55,11 +55,13 @@
                         <td class="text-center">{{$company->phone}}</td>
                         <td class="text-center text-primary">
                             <a href="" onclick="editCompany({{ $company->id }}, event)">
-                                Edit
+                                <i class="icon icon-pencil"></i>
                             </a>
                         </td>
                         <td class="text-center text-danger">
-                            <a href="" class="text-danger" onclick="deleteCompany({{$company->id}}, event)">Delete</a>
+                            <a href="" class="text-danger" onclick="deleteCompany({{$company->id}}, event)">
+                                <i class="icon icon-trash"></i>
+                            </a>
                         </td>
                     </tr>
                 @endforeach
@@ -67,8 +69,28 @@
             </table>
         </div>
     </div>
+    {{ $companies }}
+
+
     @include('company.modal')
     @include('helpers.delete-modal')
+@endsection
+
+@section('page-level-js')
+    <script>
+
+        /**
+         * Delete modal
+         *
+         * @param id
+         * @param event
+         */
+        function deleteCompany(id, event) {
+            event.preventDefault();
+            // $('#delete-form').attr('action', '/companies/' + id);
+            $('#delete-modal').modal('show');
+        }
+    </script>
 @endsection
 
 @section('validator')

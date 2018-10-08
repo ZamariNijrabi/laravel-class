@@ -2,7 +2,7 @@
 
     <div class="page-header-inner">
         <div class="page-logo">
-            <a href="{{ url('/home') }}"> Medicine Management System</a>
+            <a href="{{ url('/home') }}"> Online Shoping</a>
             <div class="menu-toggler sidebar-toggler hide">
 
             </div>

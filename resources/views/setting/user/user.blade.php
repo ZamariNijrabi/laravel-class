@@ -80,7 +80,7 @@
     {{-- End user list table --}}
 
     @include('setting.user.modal')
-    @include('helper.delete-modal')
+    @include('helpers.delete-modal')
 @endsection
 
 @section('page-level-js')
