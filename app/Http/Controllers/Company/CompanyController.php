@@ -5,11 +5,13 @@ namespace App\Http\Controllers\Company;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CompanyRequest;
+use App\Mail\CompanyActivation;
 use App\Models\Company;
 use App\Models\CompanyCategory;
 use App\Models\Province;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class CompanyController extends Controller
 {
@@ -47,6 +49,8 @@ class CompanyController extends Controller
     public function store(CompanyRequest $request)
     {
         Company::create($this->mapRequestData($request));
+
+        Mail::to(Auth::user())->queue(new CompanyActivation(Auth::user()));
 
         return back();
     }

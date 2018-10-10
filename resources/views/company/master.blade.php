@@ -1,16 +1,25 @@
-@include('layouts.head')
-@include('layouts.header')
-<div class="container">
+@include('layouts.admin.head')
+@include('layouts.admin.header')
 
-    <div class="row">
-        <div class="col-md-3">
-            @include('layouts.sidebar')
-        </div>
-        <div class="col-md-9">
-            @yield('content')
+<div class="page-container">
+    @include('layouts.admin.sidebar')
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <h3 class="page-title">
+                @yield('page-title')
+            </h3>
+            <div class="page-bar">
+                @yield('page-breadcrumb')
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    @yield('content')
+                </div>
+            </div>
         </div>
     </div>
-
 </div>
 
-@include('layouts.footer')
+@include('layouts.admin.footer')
+
